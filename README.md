@@ -1,2 +1,2 @@
 # generation_java
-Repositório para projetos em Java propostos no curso da Generation Brasil
+Repositório para exercícios em Java propostos no curso da Generation Brasil
