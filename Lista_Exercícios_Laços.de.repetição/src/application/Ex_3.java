@@ -1,31 +1,27 @@
 package application;
 
 import java.util.Scanner;
-/*3-	Faça um programa que receba a idade de uma pessoa e mostre na saída em qual categoria ela se encontra:
-·                     10-14 infantil
-·                     15-17 juvenil
-·                     18-25 adulto*/
 
+/*Solicitar a idade de várias pessoas e imprimir: Total de pessoas com menos de 21 anos.
+ *  Total de pessoas com mais de 50 anos. O programa termina quando idade for =-99. (WHILE)
+ */
 public class Ex_3 {
-
 	public static void main(String[] args) {
-		int swimmerAge;
-		Scanner keyboard = new Scanner(System.in);
 		
-		System.out.printf("Enter swimmer's age: ");
-		swimmerAge = keyboard.nextInt();
+		final int AGE_LIMIT = 99, UNDER_LIMIT = 21, OVER_LIMIT = 50;
+		int age = 0, under = 0, over = 0;
+		Scanner kb = new Scanner(System.in);
 		
-		if(swimmerAge >= 10 && swimmerAge <= 14) {
-			System.out.println("The swimmer belongs to the children's category");
+		while (age <= AGE_LIMIT){
+			System.out.printf("Enter the person's age: ");
+			age = kb.nextInt();
+			if(age < UNDER_LIMIT) {
+				under++;
+			}
+			else if(age > OVER_LIMIT) {
+				over++;
+			}
 		}
-		else if(swimmerAge >= 15 && swimmerAge <= 17) {
-			System.out.println("The swimmer belongs to the youth category");
-		}
-		else if(swimmerAge >= 18 && swimmerAge <= 25) {
-			System.out.println("The swimmer belongs to the adult category");
-		}
-		else {
-			System.out.println("There is no category for this age");
-		}
+		System.out.printf("\nIn total %d people are under 21 years old and %d people are over 50 years old..", under, over);
 	}
 }
