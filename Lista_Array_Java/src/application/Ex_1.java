@@ -14,14 +14,10 @@ public class Ex_1 {
 	public static void main(String[] args) {
 
 		final int POSITIONS= 6;
-		int A[] = new int[POSITIONS];
+		int A[] = {1, 0, 5, -2, -5, 7};
 		int i, sum; 
 		Scanner kb = new Scanner(System.in);
 		
-		for(i = 0; i < POSITIONS; i++) {
-			System.out.printf("Enter the number: ");
-			A[i] = kb.nextInt();
-			}
 		System.out.println("\nThe array is: ");
 		for(i = 0; i < POSITIONS; i++) {
 			System.out.printf("[%d]", A[i]);
