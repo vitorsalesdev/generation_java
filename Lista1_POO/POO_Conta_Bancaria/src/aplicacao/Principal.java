@@ -1,5 +1,6 @@
 package aplicacao;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 import entidades.ContaBancaria;
@@ -7,11 +8,13 @@ import entidades.ContaBancaria;
 public class Principal {
 
 	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
 		Scanner kb = new Scanner(System.in);
 		ContaBancaria novoCliente = new ContaBancaria();
 		
 		System.out.printf("Digite o nome do cliente: ");
-		novoCliente.nomeCliente = kb.nextLine();
+		novoCliente.nomeCliente = kb.nextLine().toUpperCase();
 		System.out.printf("Digite a idade do cliente: ");
 		novoCliente.idadeCliente = kb.nextInt();
 		System.out.printf("Digite o CPF do cliente: ");
@@ -23,6 +26,7 @@ public class Principal {
 		System.out.printf("Digite o telefone do cliente: ");
 		novoCliente.telefoneCliente = kb.nextLong();
 		System.out.printf("Digite o endereço do cliente: ");
+		kb.nextLine();
 		novoCliente.enderecoCliente = kb.nextLine();
 		System.out.printf("Digite o saldo do cliente: ");
 		novoCliente.saldoCliente = kb.nextDouble();
